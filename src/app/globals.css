@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+ * ════════════════════════════════════════════════════════════
+ *  COLOR SYSTEM — CHANGE THESE TO REBRAND THE ENTIRE APP
+ *
+ *  Every color in the app reads from these variables. To match
+ *  your campus identity, change the hex values below — every
+ *  button, card, badge, and accent updates automatically.
+ * ════════════════════════════════════════════════════════════
+ */
+@theme {
+  /* surfaces */
+  --color-bg: #ffffff;
+  --color-surface: #f8f9fb;
+  --color-surface-2: #f0f2f5;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* borders */
+  --color-border: #e2e5ea;
+  --color-border-strong: #cfd3da;
+
+  /* text */
+  --color-text: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* primary — the main brand color (buttons, active states, links) */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-light: #eff6ff;
+  --color-primary-text: #ffffff;
+
+  /* status colors */
+  --color-lost: #ef4444;
+  --color-lost-light: #fef2f2;
+  --color-found: #10b981;
+  --color-found-light: #ecfdf5;
+  --color-recovered: #8b5cf6;
+  --color-recovered-light: #f5f3ff;
+  --color-pending: #f59e0b;
+  --color-pending-light: #fffbeb;
+
+  /* feedback */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* shared input style */
+.input-field {
+  width: 100%;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.925rem;
+  color: var(--color-text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input-field::placeholder { color: var(--color-text-muted); }
+.input-field:hover { border-color: var(--color-border-strong); }
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
