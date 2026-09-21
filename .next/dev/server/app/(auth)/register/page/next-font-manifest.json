@@ -1,0 +1,12 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/src/app/(auth)/register/page": [
+      "static/media/Inter_Regular-s.p.2nj_q8muj7q4o.woff2",
+      "static/media/Inter_Medium-s.p.029eh_alc3n7n.woff2",
+      "static/media/Inter_SemiBold-s.p.0gq1_mh3vzajs.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

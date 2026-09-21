@@ -20,8 +20,12 @@ export default function LandingPage() {
       {/* top nav */}
       <header className="flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-text">LF</span>
-          <span className="font-semibold text-text">Lost & Found</span>
+          <img
+          src="/logo.jpeg"
+          alt="Campus Lost & Found Logo"
+          className="h-8 w-8 rounded-lg object-cover"
+        />
+        <span className="font-semibold text-text">Lost & Found</span>
         </div>
         <div className="flex items-center gap-3">
           <Link href="/login" className="rounded-lg px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface">
