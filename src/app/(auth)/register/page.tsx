@@ -54,6 +54,8 @@ export default function RegisterPage() {
             <input type="email" required value={form.email} onChange={(e) => set("email", e.target.value)} className="input-field" placeholder="you@campus.edu" />
           </div>
           <div>
+         
+         
             <label className="mb-1 block text-sm font-medium text-text">Password *</label>
             <input type="password" required minLength={8} value={form.password} onChange={(e) => set("password", e.target.value)} className="input-field" />
           </div>

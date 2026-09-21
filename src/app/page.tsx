@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Search, Shield, Zap, Users } from "lucide-react";
+import TypewriterHeading from "@/components/ui/TypewriterHeading";
 
 const FEATURES = [
   { icon: Search, title: "Quick Search", description: "Find your item fast with filters by category, location, and date." },
@@ -40,9 +41,10 @@ export default function LandingPage() {
       {/* hero */}
       <section className="mx-auto max-w-3xl px-6 py-16 text-center sm:py-24">
         <p className="text-sm font-medium text-primary">Campus Lost & Found System</p>
-        <h1 className="mt-3 text-4xl font-bold leading-tight text-text sm:text-5xl">
-          Lost something on campus? Find it here.
-        </h1>
+        <TypewriterHeading
+          text="Lost something on campus? Find it here."
+          className="mt-3 text-4xl font-bold leading-tight text-text sm:text-5xl"
+        />
         <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
           Report lost items, browse what's been found, and get matched with your belongings.
           Built for students, by students.

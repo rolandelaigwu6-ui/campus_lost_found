@@ -440,6 +440,22 @@
     pointer-events: none;
   }
 
+  .invisible {
+    visibility: hidden;
+  }
+
+  .sr-only {
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -506,6 +522,14 @@
 
   .z-\[100\] {
     z-index: 100;
+  }
+
+  .col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .row-start-1 {
+    grid-row-start: 1;
   }
 
   .m-auto {
@@ -614,6 +638,10 @@
     display: none;
   }
 
+  .inline-block {
+    display: inline-block;
+  }
+
   .inline-flex {
     display: inline-flex;
   }
@@ -678,6 +706,10 @@
     height: calc(var(--spacing) * 64);
   }
 
+  .h-\[0\.8em\] {
+    height: .8em;
+  }
+
   .h-full {
     height: 100%;
   }
@@ -728,6 +760,10 @@
 
   .w-56 {
     width: calc(var(--spacing) * 56);
+  }
+
+  .w-\[0\.08em\] {
+    width: .08em;
   }
 
   .w-full {
