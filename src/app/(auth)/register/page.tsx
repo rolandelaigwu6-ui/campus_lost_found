@@ -1,6 +1,7 @@
 "use client";
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { useAuth } from "@/lib/context/AuthContext";
 import Button from "@/components/ui/Button";
 
@@ -24,6 +25,13 @@ export default function RegisterPage() {
   return (
     <div className="flex min-h-dvh items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
+        <Link
+          href="/"
+          className="mb-6 inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm text-text-secondary transition-colors hover:bg-surface hover:text-text"
+        >
+          <ArrowLeft size={16} /> Back
+        </Link>
+
         <div className="mb-8 text-center">
           <Link href="/" className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-text"><img
             src="/logo.jpeg"
