@@ -10,7 +10,7 @@ interface AuthCtxValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (data: { email: string; password: string; fullName: string; department?: string; phone?: string }) => Promise<void>;
+  register: (data: { email: string; password: string; fullName: string; Cluster?: string; phone?: string }) => Promise<void>;
   logout: () => void;
   refreshUser: () => Promise<void>;
 }
@@ -58,7 +58,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     router.push("/dashboard");
   };
 
-  const register = async (data: { email: string; password: string; fullName: string; department?: string; phone?: string }) => {
+  const register = async (data: { email: string; password: string; fullName: string; Cluster?: string; phone?: string }) => {
     const res = await authApi.register(data);
     setUser(res.user);
     router.push("/dashboard");

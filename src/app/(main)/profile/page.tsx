@@ -28,8 +28,8 @@ export default function ProfilePage() {
 
         <dl className="mt-6 space-y-4 border-t border-border pt-4">
           <div className="flex justify-between">
-            <dt className="text-sm text-text-secondary">Department</dt>
-            <dd className="text-sm font-medium text-text">{user.department ?? "Not set"}</dd>
+            <dt className="text-sm text-text-secondary">Cluster</dt>
+            <dd className="text-sm font-medium text-text">{user.Cluster ?? "Not set"}</dd>
           </div>
           <div className="flex justify-between">
             <dt className="text-sm text-text-secondary">Phone</dt>

@@ -39,7 +39,7 @@ export interface User {
   fullName: string;
   avatarUrl: string | null;
   phone: string | null;
-  department: string | null;
+  Cluster: string | null;
   role: UserRole;
   createdAt: string; // ISO 8601
 }
@@ -53,7 +53,7 @@ export interface RegisterRequest {
   email: string;
   password: string;
   fullName: string;
-  department?: string;
+  Cluster?: string;
   phone?: string;
 }
 
@@ -65,7 +65,7 @@ export interface AuthResponse {
 export interface UpdateProfileRequest {
   fullName?: string;
   phone?: string;
-  department?: string;
+  Cluster?: string;
   avatarUrl?: string | null;
 }
 

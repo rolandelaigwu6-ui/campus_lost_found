@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 export default function RegisterPage() {
   const { register } = useAuth();
-  const [form, setForm] = useState({ fullName: "", email: "", password: "", department: "", phone: "" });
+  const [form, setForm] = useState({ fullName: "", email: "", password: "", Cluster: "", phone: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +25,13 @@ export default function RegisterPage() {
     <div className="flex min-h-dvh items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <Link href="/" className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-text">LF</Link>
+          <Link href="/" className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-text"><img
+            src="/logo.jpeg"
+            alt="Campus Lost & Found Logo"
+            className="h-8 w-8 rounded-lg object-cover"
+            />
+          </Link>
+
           <h1 className="mt-4 text-2xl font-bold text-text">Create an account</h1>
           <p className="mt-1 text-sm text-text-secondary">Join the campus lost & found</p>
         </div>
@@ -44,8 +50,8 @@ export default function RegisterPage() {
             <input type="password" required minLength={8} value={form.password} onChange={(e) => set("password", e.target.value)} className="input-field" />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-text">Department</label>
-            <input value={form.department} onChange={(e) => set("department", e.target.value)} className="input-field" placeholder="Optional" />
+            <label className="mb-1 block text-sm font-medium text-text">Cluster</label>
+            <input value={form.Cluster} onChange={(e) => set("Cluster", e.target.value)} className="input-field" placeholder="Optional" />
           </div>
           <div>
             <label className="mb-1 block text-sm font-medium text-text">Phone</label>
